@@ -1,0 +1,18 @@
+{
+  "name": "arcade-sampler",
+  "private": true,
+  "type": "module",
+  "description": "Twelve tiny, complete games in one arcade cabinet, each a different genre in its own art style: space deliveries, a platformer, a rooftop runner, merge and word puzzles, a tactics duel, tower defense, pixel-art rooms with sword fights, a neon arena for two, mini golf, lakeside fishing and a synthwave racer. Medals and best scores on every cabinet.",
+  "scripts": {
+    "setup": "npm install && node .github/pushplay/node_modules/playwright/cli.js install chromium",
+    "postinstall": "npm ci --prefix .github/pushplay --no-audit --no-fund || npm install --prefix .github/pushplay --no-audit --no-fund",
+    "dev": "node .github/pushplay/dev.mjs",
+    "check": "node .github/pushplay/check.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.3.7"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
